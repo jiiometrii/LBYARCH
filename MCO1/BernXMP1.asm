@@ -1,3 +1,5 @@
+; Bernardo, Xian Ira O. | Manlangit Aila Janelle C. | S14
+
 %include "io64.inc"
 
 section .bss
