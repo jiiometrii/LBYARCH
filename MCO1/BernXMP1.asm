@@ -95,7 +95,7 @@ print_result:
     CMP RSI, 1
     JE happy_num
     INC RCX
-    CMP RCX, 19
+    CMP RCX, 18
     JA sad_num
     MOV RDI, [res]
     MOV [num], RDI
