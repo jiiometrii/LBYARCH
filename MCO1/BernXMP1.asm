@@ -2,6 +2,8 @@
 
 section .bss
 inp resb 21
+
+section .data
 num dq 0
 res dq 0 ;result of squaring and adding
 
@@ -15,11 +17,19 @@ main:
     xor rcx, rcx
 
 ask_input:
+    xor RAX, RAX
+    xor RBX, RBX
+    MOV RDI, inp ; Clear the input buffer
+    MOV RCX, 21
+    MOV AL, 0
+    REP STOSB
+    
+    mov [num], rbx ; Reset num variable
+    mov [res], rbx ; Reset res variable
+
     PRINT_STRING "Input number: "
     GET_STRING inp, 21
     MOV RSI, inp
-    xor RAX, RAX
-    xor RBX, RBX
     
 check_inp:
     LODSB ;loads to RAX
@@ -38,16 +48,10 @@ check_inp:
     JNE normal_process
     CMP RAX, 5
     JA err_msg
-    JNE normal_process
-    CMP RAX, 5
-    JNE normal_process
-    JMP err_msg
 
 normal_process:
-    MOV RCX, RBX
-    IMUL RCX, 10
+    IMUL RBX, 10
     JC err_msg
-    MOV RBX, RCX
     ADD RBX, RAX
     JC err_msg
     jmp check_inp
@@ -81,7 +85,6 @@ square_num:
     MOV RAX, RDX
     MUL RDX
     ADD [res], RAX
-    
     JMP split_num
     
 print_result:
@@ -103,19 +106,19 @@ happy_num:
     NEWLINE
     PRINT_STRING "Sad Number: No"
     NEWLINE
-    JMP end_program
+    JMP ask_again
 
 sad_num:
     NEWLINE
     PRINT_STRING "Sad Number: Yes"
     NEWLINE
-    JMP end_program
+    JMP ask_again
 
-end_program:
+ask_again:
     PRINT_STRING "Input another number? (Y/N): "
     GET_STRING inp, 21
     MOV RSI, inp
-    LODSB ;loads to RAX
+    LODSB
     CMP RAX, 'Y'
     JE ask_input
     CMP RAX, 'y'
@@ -124,7 +127,7 @@ end_program:
     JE exit_program
     CMP RAX, 'n'
     JE exit_program
-    JMP err_msg
+    JMP ask_again
 
 err_msg:
     PRINT_STRING "Invalid Input."

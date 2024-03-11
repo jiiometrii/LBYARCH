@@ -18,6 +18,7 @@ print_ite:
     NEWLINE
     PRINT_STRING "Iterations: "
     PRINT_DEC 8, inp
+
 split_num:
     MOV RAX, [inp]
     CMP RAX, 0
@@ -45,13 +46,7 @@ print_result:
     MOV RSI, [res]
     CMP RSI, 1
     JE happy_num
-    ;NEWLINE
-    ;PRINT_STRING "COUNTER: "
-    ;PRINT_DEC 1, RCX
     INC RCX
-    ;NEWLINE
-    ;PRINT_STRING "COUNTER: "
-    ;PRINT_DEC 1, RCX
     CMP RCX, 19
     JA sad_num
     MOV RDI, [res]
@@ -59,13 +54,16 @@ print_result:
     MOV RDI, 0
     MOV [res], RDI
     JMP split_num
+
 happy_num:
     NEWLINE
     PRINT_STRING "Sad Number: No"
     JMP exit
+
 sad_num:
     NEWLINE
     PRINT_STRING "Sad Number: Yes"
+    
 exit:
     NEWLINE
     PRINT_STRING "End of Program"

@@ -66,11 +66,11 @@ ask_again:
     JE end_program
     JMP ask_again
 
-end_program:
-    xor rax, rax
-    ret
-
 err_msg:
     PRINT_STRING "Invalid Input."
     NEWLINE
     JMP ask_input
+    
+end_program:
+    xor rax, rax
+    ret
