@@ -67,7 +67,6 @@ MOV RCX, 1
 print_ite:
     CMP RCX, 1
     JA split_num
-    NEWLINE
     PRINT_STRING "Iterations: "
     PRINT_DEC 8, [num]
 
@@ -115,8 +114,10 @@ sad_num:
     JMP ask_again
 
 ask_again:
+    NEWLINE
     PRINT_STRING "Input another number? (Y/N): "
     GET_STRING inp, 21
+    NEWLINE
     MOV RSI, inp
     LODSB
     CMP RAX, 'Y'
@@ -132,7 +133,7 @@ ask_again:
 err_msg:
     PRINT_STRING "Invalid Input."
     NEWLINE
-    JMP ask_input
+    JMP ask_again
 
 exit_program:
     xor rax, rax
