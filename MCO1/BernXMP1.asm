@@ -1,76 +1,76 @@
 %include "io64.inc"
 
-section .data
-buffer dq 0 ; buffer to store the input string
-bufferLen equ $-buffer
-inp dq 0
+section .bss
+inp resb 21
 
 section .text
 global main
+
 main:
-    mov rbp, rsp; for correct debugging
-    ;accommodate largest 64 bit integer
-    ;write your code here
-    
-start_inp:
+    mov rbp, rsp; for correct debugging 
+    mov rcx, 0
+    mov [inp], rcx
+    xor rcx, rcx
+
+ask_input:
     PRINT_STRING "Input number: "
-    GET_STRING [buffer], 8 ; read the input as a string
-    NEWLINE
-
-    ; validate the input
-    mov rsi, buffer
+    GET_STRING inp, 21
+    MOV RSI, inp
+    xor RAX, RAX
+    xor RBX, RBX
     
-validate_input:
-    lodsb ; load the next character from the string
-    test al, al ; check if we reached the end of the string
-    jz input_valid ; if we did, the input is valid
-    sub al, '0' ; convert the character to a number
-    jb err_msg ; if it's less than 0, it's not a valid number
-    cmp al, 9 ; check if the number is greater than 9
-    ja err_msg ; if it is, it's not a valid number
-    jmp validate_input ; check the next character
+check_inp:
+    LODSB ;loads to RAX
+    CMP RAX, 0
+    JE done
+    CMP RAX, 10
+    JE done
+    CMP RAX, '0'
+    JB err_msg 
+    CMP RAX, '9'
+    JA err_msg 
+    SUB RAX, '0'
+    MOV RDX, 1844674407370955161
+    CMP RBX, RDX
+    JA err_msg
+    JNE normal_process
+    CMP RAX, 5
+    JA err_msg
+    
+normal_process:
+    MOV RCX, RBX
+    IMUL RCX, 10
+    JC err_msg
+    MOV RBX, RCX
+    ADD RBX, RAX
+    JC err_msg
+    jmp check_inp
 
-input_valid:
-    ; convert the string to a number
-    mov rsi, buffer
+done:
+    mov [inp], rbx
     xor rax, rax
+    JMP ask_again
     
-convert_string:
-    lodsb ; load the next character from the string
-    test al, al ; check if we reached the end of the string
-    jz proc_inp ; if we did, we're done
-    sub al, '0' ; convert the character to a number
-    imul rax, rax, 10 ; multiply the current number by 10
-    add rax, rax, al ; add the new digit
-    jmp convert_string ; process the next character
-    
-proc_inp:
-    MOV [inp], RAX
-    PRINT_HEX 8,[inp]
+ask_again:
+    PRINT_STRING "Input another number? (Y/N): "
+    GET_STRING inp, 21
+    MOV RSI, inp
+    LODSB
+    CMP RAX, 'Y'
+    JE ask_input
+    CMP RAX, 'y'
+    JE ask_input
+    CMP RAX, 'N'
+    JE end_program
+    CMP RAX, 'n'
+    JE end_program
+    JMP ask_again
 
-;err mess
+end_program:
+    xor rax, rax
+    ret
+
 err_msg:
     PRINT_STRING "Invalid Input."
     NEWLINE
-    JMP start_inp
-    
-    ;enter loop
-    
-    ;is single digit
-    ;single digit square
-    ;loop to start
-    
-    ;is not single digit
-    ;enter loop
-    ;separate digits
-    ;square each digit
-    ;add each square
-    ;is 1 - loop if no, exit if yes
-    
-    MOV RAX, [inp]
-    MOV RBX, RAX
-    MUL RBX
-    
-exit:
-    xor rax, rax
-    ret
+    JMP ask_input

@@ -20,42 +20,34 @@ ask_input:
     xor RBX, RBX
     
 check_inp:
-    ;load character
     LODSB ;loads to RAX
-    ;check done
     CMP RAX, 0
     JE done
-    ;check for newline
     CMP RAX, 10
     JE done
-    ;check if less than '0'
     CMP RAX, '0'
-    JB err_msg ;jump if below
+    JB err_msg 
     CMP RAX, '9'
-    JA err_msg ;jump if above
+    JA err_msg 
     SUB RAX, '0'
-    ;check if current number is greater than 1844674407370955161
     MOV RDX, 1844674407370955161
     CMP RBX, RDX
-    JA err_msg ;jump if above
+    JA err_msg
     JNE normal_process
-    ;check if next digit is greater than 5
     CMP RAX, 5
     JA err_msg
     
 normal_process:
-    ;multiply RBX by 10
     MOV RCX, RBX
     IMUL RCX, 10
-    JC err_msg ; jump if carry (overflow)
+    JC err_msg
     MOV RBX, RCX
-    ;add RAX to RBX
     ADD RBX, RAX
-    JC err_msg ; jump if carry (overflow)
+    JC err_msg
     jmp check_inp
 
 done:
-    mov [inp], rbx ; store the input number
+    mov [inp], rbx
     xor rax, rax
     JMP ask_again
     
@@ -63,7 +55,7 @@ ask_again:
     PRINT_STRING "Input another number? (Y/N): "
     GET_STRING inp, 21
     MOV RSI, inp
-    LODSB ;loads to RAX
+    LODSB
     CMP RAX, 'Y'
     JE ask_input
     CMP RAX, 'y'
