@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\1SchoolFiles\\LBYARCH\\mco2\\lbyarch_mco2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5CE0AE0D-7E41-4BBC-84FE-4A77498B3239}|lbyarch_mco2.vcxproj|E:\\1SchoolFiles\\LBYARCH\\mco2\\lbyarch_mco2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5CE0AE0D-7E41-4BBC-84FE-4A77498B3239}|lbyarch_mco2.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CE0AE0D-7E41-4BBC-84FE-4A77498B3239}|lbyarch_mco2.vcxproj|E:\\1SchoolFiles\\LBYARCH\\mco2\\lbyarch_mco2\\asmfunc.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5CE0AE0D-7E41-4BBC-84FE-4A77498B3239}|lbyarch_mco2.vcxproj|solutionrelative:asmfunc.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "asmfunc.asm",
+              "DocumentMoniker": "E:\\1SchoolFiles\\LBYARCH\\mco2\\lbyarch_mco2\\asmfunc.asm",
+              "RelativeDocumentMoniker": "asmfunc.asm",
+              "ToolTip": "E:\\1SchoolFiles\\LBYARCH\\mco2\\lbyarch_mco2\\asmfunc.asm",
+              "RelativeToolTip": "asmfunc.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-26T15:41:13.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "E:\\1SchoolFiles\\LBYARCH\\mco2\\lbyarch_mco2\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "E:\\1SchoolFiles\\LBYARCH\\mco2\\lbyarch_mco2\\main.c",
+              "RelativeToolTip": "main.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-03-26T15:41:01.242Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
