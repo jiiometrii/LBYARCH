@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\",
+  "WorkspaceRootPath": "E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\asmfunc.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\asmfunc.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|solutionrelative:asmfunc.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\cfunc.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\cfunc.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BF5E96E4-A168-48E6-A001-6312794DCA98}|LBYARCH_MCO2.vcxproj|solutionrelative:cfunc.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -28,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.c",
-              "DocumentMoniker": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\main.c",
+              "DocumentMoniker": "E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\main.c",
               "RelativeDocumentMoniker": "main.c",
-              "ToolTip": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\main.c",
+              "ToolTip": "E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\main.c",
               "RelativeToolTip": "main.c",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAAAJwAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-03-26T15:41:01.242Z",
               "EditorCaption": ""
@@ -41,9 +41,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "cfunc.c",
-              "DocumentMoniker": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\cfunc.c",
+              "DocumentMoniker": "E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\cfunc.c",
               "RelativeDocumentMoniker": "cfunc.c",
-              "ToolTip": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\cfunc.c",
+              "ToolTip": "E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\cfunc.c",
               "RelativeToolTip": "cfunc.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
@@ -53,9 +53,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "asmfunc.asm",
-              "DocumentMoniker": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\asmfunc.asm",
+              "DocumentMoniker": "E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\asmfunc.asm",
               "RelativeDocumentMoniker": "asmfunc.asm",
-              "ToolTip": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\asmfunc.asm",
+              "ToolTip": "E:\\1SchoolFiles\\LBYARCH\\SASM\\Projects\\MCO\\MCO2\\lbyarch_mco2\\asmfunc.asm",
               "RelativeToolTip": "asmfunc.asm",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
