@@ -13,6 +13,8 @@ int main() {
 	long long int start, end;
 	double PCFreq, elapseC = 0.0, elapseAsm = 0.0;
 	double ansC, ansAsm;
+	double totalElapseC = 0.0;
+	double totalElapseAsm = 0.0;
 	QueryPerformanceFrequency(&li);
 	PCFreq = (double)(li.QuadPart);
 
@@ -21,6 +23,8 @@ int main() {
 		double f1 = 1.0;
 		double f2 = 1.0;
 		double ASMsdot = 0.0;
+		elapseC = 0.0;
+		elapseAsm = 0.0;
 
 		// time for C function
 		QueryPerformanceCounter(&li);
@@ -29,6 +33,7 @@ int main() {
 		QueryPerformanceCounter(&li);
 		end = li.QuadPart;
 		elapseC += ((double)(end - start)) * 1000.00 / PCFreq;
+		totalElapseC += elapseC;
 
 		if (ansC == 1073741824)
 			printf("C function 2^30 Pass %d\n", i + 1);
@@ -42,6 +47,7 @@ int main() {
 		QueryPerformanceCounter(&li);
 		end = li.QuadPart;
 		elapseAsm += ((double)(end - start)) * 1000.00 / PCFreq;
+		totalElapseAsm += elapseAsm;
 
 		if (ansAsm == 1073741824)
 			printf("ASM function 2^30 Pass %d\n", i + 1);
@@ -51,13 +57,18 @@ int main() {
 		printf("\n");
 	}
 
-	printf("\n");
+	printf("----------\n");
+	printf("Average time for C function in 2^30: %lf ms\n", elapseC / loope);
+	printf("Average time for x86-64 function in 2^30: %lf ms\n", elapseAsm / loope);
+	printf("----------\n\n");
 
 	for (i = 0; i < loope; i++) {
 		n = 16777216;
 		double f1 = 1.0;
 		double f2 = 1.0;
 		double ASMsdot = 0.0;
+		elapseC = 0.0;
+		elapseAsm = 0.0;
 
 		// time for C function
 		QueryPerformanceCounter(&li);
@@ -66,6 +77,7 @@ int main() {
 		QueryPerformanceCounter(&li);
 		end = li.QuadPart;
 		elapseC += ((double)(end - start)) * 1000.00 / PCFreq;
+		totalElapseC += elapseC;
 
 		if (ansC == 16777216)
 			printf("C function 2^24 Pass %d\n", i + 1);
@@ -79,6 +91,7 @@ int main() {
 		QueryPerformanceCounter(&li);
 		end = li.QuadPart;
 		elapseAsm += ((double)(end - start)) * 1000.00 / PCFreq;
+		totalElapseAsm += elapseAsm;
 
 		if (ansAsm == 16777216)
 			printf("ASM function 2^24 Pass %d\n", i + 1);
@@ -88,13 +101,18 @@ int main() {
 		printf("\n");
 	}
 
-	printf("\n");
+	printf("----------\n");
+	printf("Average time for C function in 2^24: %lf ms\n", elapseC / loope);
+	printf("Average time for x86-64 function in 2^24: %lf ms\n", elapseAsm / loope);
+	printf("----------\n\n");
 
 	for (i = 0; i < loope; i++) {
 		n = 1048576;
 		double f1 = 1.0;
 		double f2 = 1.0;
 		double ASMsdot = 0.0;
+		elapseC = 0.0;
+		elapseAsm = 0.0;
 
 		// time for C function
 		QueryPerformanceCounter(&li);
@@ -103,6 +121,7 @@ int main() {
 		QueryPerformanceCounter(&li);
 		end = li.QuadPart;
 		elapseC += ((double)(end - start)) * 1000.00 / PCFreq;
+		totalElapseC += elapseC;
 
 		if (ansC == 1048576)
 			printf("C function 2^20 Pass %d\n", i+1);
@@ -116,6 +135,7 @@ int main() {
 		QueryPerformanceCounter(&li);
 		end = li.QuadPart;
 		elapseAsm += ((double)(end - start)) * 1000.00 / PCFreq;
+		totalElapseAsm += elapseAsm;
 
 		if (ansAsm == 1048576)
 			printf("ASM function 2^20 Pass %d\n", i+1);
@@ -125,10 +145,16 @@ int main() {
 		printf("\n");
 	}
 
+	printf("----------\n");
+	printf("Average time for C function in 2^20: %lf ms\n", elapseC / loope);
+	printf("Average time for x86-64 function in 2^20: %lf ms\n", elapseAsm / loope);
+	printf("----------\n\n");
+
 	printf("----------------------------------------\n");
-	printf("ANALYSIS:\n");
-	printf("Average time for C function over all loop(s): %lf ms\n", elapseC / loope);
-	printf("Average time for x86-64 function over all loop(s): %lf ms\n", elapseAsm / loope);
+	printf("Total Average:\n");
+	printf("Average time for C function over all loop(s): %lf ms\n", totalElapseC / loope);
+	printf("Average time for x86-64 function over all loop(s): %lf ms\n", totalElapseAsm / loope);
+	printf("----------------------------------------\n\n");
 
 	return 0;
 }

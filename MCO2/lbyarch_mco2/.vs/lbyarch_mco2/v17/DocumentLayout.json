@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "main.c",
               "ToolTip": "C:\\Users\\xiani\\Documents\\GitHub\\LBYARCH\\MCO2\\lbyarch_mco2\\main.c",
               "RelativeToolTip": "main.c",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAAAG8AAAAaAAAA",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAAAJwAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-03-26T15:41:01.242Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "cfunc.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-04-01T07:05:26.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T07:05:26.756Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "asmfunc.asm",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-27T13:19:09.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T13:19:09.353Z"
             }
           ]
         }
